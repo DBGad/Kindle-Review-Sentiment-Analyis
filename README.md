@@ -70,8 +70,33 @@ pip install pandas numpy nltk gensim scikit-learn tqdm
 jupyter notebook "Kindle Review Sentiment Analyis.ipynb"
 ```
 
+## 🖥️ Streamlit App (Deployment)
+
+A simple **Streamlit web app** was built for live sentiment prediction:
+
+- User inputs any Kindle review
+- Review is preprocessed and converted to Word2Vec average vector
+- The logistic model predicts the sentiment in real-time
+- ✅ Positive or ❌ Negative result is shown
+
+### Features:
+- **Progress bar** while processing
+- **Example expandable section**
+- 🎈 `st.balloons()` and `st.toast()` for engagement
+- Clean UI with footer
+
+### Run the app locally:
+```bash
+streamlit run app.py
+```
 ---
 
+
+## 📦 Requirements
+```bash
+pip install -r requirements.txt
+```
+---
 
 ## 📬 Contact
 **Author**: Gad Amr  
