@@ -1,0 +1,6 @@
+streamlit
+gensim
+numpy
+scikit-learn
+nltk
+beautifulsoup4
