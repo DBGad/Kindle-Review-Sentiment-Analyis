@@ -100,5 +100,5 @@ pip install -r requirements.txt
 
 ## 📬 Contact
 **Author**: Gad Amr  
-**LinkedIn**: [(https://www.linkedin.com/in/gaadamr/)]  
+**LinkedIn**: [Gad Amr](https://www.linkedin.com/in/gaadamr/)   
 **License**: MIT
