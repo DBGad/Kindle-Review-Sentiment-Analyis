@@ -5,16 +5,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 import nltk
-# --- تأكد أن الـ corpora المطلوبة متحملة ---
-nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
-if not os.path.exists(nltk_data_path):
-    os.makedirs(nltk_data_path)
+from nltk_downloader import download_nltk_data
+download_nltk_data()
 
-for pkg in ["stopwords", "wordnet", "punkt", "omw-1.4"]:
-    try:
-        nltk.data.find(f"corpora/{pkg}")
-    except LookupError:
-        nltk.download(pkg)
 
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
