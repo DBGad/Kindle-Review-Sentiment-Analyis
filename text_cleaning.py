@@ -1,14 +1,20 @@
 import re
+import os
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
-nltk.download('omw-1.4')
-nltk.download('punkt_tab')
+# --- تأكد أن الـ corpora المطلوبة متحملة ---
+nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+
+for pkg in ["stopwords", "wordnet", "punkt", "omw-1.4"]:
+    try:
+        nltk.data.find(f"corpora/{pkg}")
+    except LookupError:
+        nltk.download(pkg)
 
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
